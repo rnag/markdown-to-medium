@@ -57,7 +57,8 @@ jobs:
           node-version: 18
       - name: Run NPM Build
         run: |
-          npm install -g surge
+          npm i -g surge
+          npm i
           npm run build
       - name: Deploy to Surge
         run: surge ./build ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
