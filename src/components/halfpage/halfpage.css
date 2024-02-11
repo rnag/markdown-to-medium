@@ -4,6 +4,7 @@
   flex-direction: column;
   width: 50%;
   font-size: 21px;
+  padding-top: 10px;
 }
 
 .halfpage__header {
@@ -11,12 +12,12 @@
   text-transform: uppercase;
   color: #777;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 21px;
   line-height: 16px;
 }
 
 .halfpage__subheader {
-  font-size: 12px;
+  font-size: 17px;
   color: #999;
 }
 

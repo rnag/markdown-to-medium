@@ -15,7 +15,7 @@ export const App = props => {
         <HalfPage header="Markdown" background="#efffff">
           <TextField />
         </HalfPage>
-        <HalfPage header="Medium" subheader="(copy and paste to medium)">
+        <HalfPage header="Medium" subheader="(paste to medium)">
           <Medium />
         </HalfPage>
       </div>

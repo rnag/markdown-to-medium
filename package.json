@@ -12,16 +12,28 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@mui/material": "^5.15.9",
     "markdown": "0.5.0",
     "marked": "0.3.5",
-    "material-ui": "0.15.0",
-    "react": "15.1.0",
-    "react-dom": "15.1.0",
-    "react-redux": "4.4.5",
-    "react-tap-event-plugin": "1.0.0",
-    "redux": "3.5.2"
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-redux": "9.1.0",
+    "redux": "5.0.1"
   },
   "devDependencies": {
-    "react-scripts": "0.7.0"
+    "@babel/preset-env": "^7.23.9",
+    "react-scripts": "5.0.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
