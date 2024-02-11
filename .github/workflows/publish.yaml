@@ -1,11 +1,12 @@
 # This workflow will push to surge.sh
 #
-# To make it work, you need a dev.to API key, see:
-# https://developers.forem.com/api/#section/Authentication/api_key
+# Credits:
+#   https://github.com/yavisht/deploy-via-surge.sh-github-action-template
 #
 # Once you have generated the token, you need to add them as a secret in your
 # GitHub repository:
-# - DEVTO_TOKEN: your dev.to API key
+# - SURGE_TOKEN: your Surge API token
+#
 # See https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets#creating-encrypted-secrets
 # for more information about GitHub secrets.
 

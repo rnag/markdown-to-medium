@@ -13,6 +13,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import pkg from '../../../package.json';
 
 import './appbar.css';
+
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
     alignItems: 'flex-start',
     paddingTop: theme.spacing(1),
