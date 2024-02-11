@@ -55,10 +55,11 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-      - name: Run NPM Build
+      - name: Install dependencies
         run: |
           npm i -g surge
           npm i
+      - name: Build and Deploy to Surge
+        run: |
           npm run build
-      - name: Deploy to Surge
-        run: surge ./build ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
+          surge ./build ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}

@@ -25,8 +25,10 @@
     "redux": "5.0.1"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@babel/preset-env": "^7.23.9",
     "@babel/preset-react": "^7.23.3",
+    "prettier": "^3.2.5",
     "react-scripts": "^5.0.1"
   },
   "browserslist": {
