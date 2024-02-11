@@ -57,18 +57,6 @@ jobs:
         with:
           node-version: 18
           cache: 'npm'
-      - name: Cache global node modules
-        uses: actions/cache@v4
-        id: global-npm-cache
-        env:
-          cache-name: cache-global-node-modules
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
       - name: Cache node modules
         id: npm-cache
         uses: actions/cache@v4
@@ -85,13 +73,10 @@ jobs:
       - name: List the state of node modules
         continue-on-error: true
         run: npm list
-      - name: Install Global Dependencies
-        if: ${{ steps.global-npm-cache.outputs.cache-hit != 'true' }}
-        run: npm i -g surge
       - name: Install Dependencies
         if: ${{ steps.npm-cache.outputs.cache-hit != 'true' }}
         run: npm ci
       - name: Build and Deploy to Surge
         run: |
           npm run build
-          surge ./build ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
+          npx surge ./build ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
