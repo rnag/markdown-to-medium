@@ -34,7 +34,7 @@ const TextField = props => {
             ref={node => {
                 content = node;
             }}
-            onInput={handleClick}></textarea>
+            onBlur={handleClick}></textarea>
     );
 };
 
