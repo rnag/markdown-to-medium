@@ -14,7 +14,7 @@ export const App = _props => {
             <AppBar />
             <DonateAlerts />
             <div className="main">
-                <HalfPage header="Markdown">
+                <HalfPage header="Markdown" background="#efffff">
                     <TextField />
                 </HalfPage>
                 <HalfPage
