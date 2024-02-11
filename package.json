@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Convert markdown to medium format",
   "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rnag/markdown-to-medium.git"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -12,6 +16,7 @@
   "author": "Ritvik Nag",
   "license": "Apache-2.0",
   "dependencies": {
+    "@mui/icons-material": "^5.15.9",
     "@mui/material": "^5.15.9",
     "marked": "^12.0.0",
     "react": "18.2.0",
