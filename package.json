@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Convert markdown to medium format",
   "main": "src/index.js",
-  "links": {
-    "bmac": "https://www.buymeacoffee.com/ritviknag",
-    "paypal": "https://paypal.me/rvkvetch"
+  "donationLinks": {
+    "BMC": "https://www.buymeacoffee.com/ritviknag",
+    "PayPal": "https://paypal.me/rvkvetch"
   },
   "repository": {
     "type": "git",

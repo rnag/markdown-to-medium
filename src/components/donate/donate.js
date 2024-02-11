@@ -11,9 +11,11 @@ import {
     Close,
     VolunteerActivismTwoTone as Heart,
     CoffeeTwoTone as Coffee,
-    PaymentsTwoTone as PayPal,
 } from '@mui/icons-material';
 import pkg from '../../../package.json';
+
+// import { FaPaypal as PayPal } from 'react-icons/fa6';
+import { LiaPaypal as PayPal } from 'react-icons/lia';
 
 export default function DonateAlerts() {
     const [open, setOpen] = React.useState(true);
@@ -60,7 +62,7 @@ export default function DonateAlerts() {
                         underline="hover"
                         sx={{ alignItems: 'center' }}
                         color="inherit"
-                        href={pkg.links.bmac}>
+                        href={pkg.donationLinks.BMC}>
                         <Coffee
                             sx={{
                                 mr: 0.7,
@@ -74,10 +76,10 @@ export default function DonateAlerts() {
                         underline="hover"
                         sx={{ ml: 1 }}
                         color="inherit"
-                        href={pkg.links.paypal}>
+                        href={pkg.donationLinks.PayPal}>
                         <PayPal
-                            sx={{
-                                mr: 0.7,
+                            style={{
+                                marginRight: '4px',
                                 fontSize: '25px',
                                 verticalAlign: 'middle',
                             }}
