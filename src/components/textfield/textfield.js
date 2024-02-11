@@ -34,7 +34,9 @@ const TextField = props => {
             ref={node => {
                 content = node;
             }}
-            onBlur={handleClick}></textarea>
+            onChange={handleClick}
+            // onBlur={handleClick}
+        ></textarea>
     );
 };
 
