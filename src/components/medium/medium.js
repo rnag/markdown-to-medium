@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './medium.css';
 import { connect } from 'react-redux';
 
 const Medium = props => {
-  console.log(JSON.stringify(props));
   const { content, copySuccess } = props;
 
     let text;

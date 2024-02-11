@@ -1,0 +1,63 @@
+# This workflow will push to surge.sh
+#
+# To make it work, you need a dev.to API key, see:
+# https://developers.forem.com/api/#section/Authentication/api_key
+#
+# Once you have generated the token, you need to add them as a secret in your
+# GitHub repository:
+# - DEVTO_TOKEN: your dev.to API key
+# See https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets#creating-encrypted-secrets
+# for more information about GitHub secrets.
+
+name: publish
+on:
+  push:
+    branches: [main]
+  # pull_request:
+  #   branches: [main]
+
+jobs:
+  # build:
+  #   name: Build
+  #   if: github.event_name == 'pull_request'
+  #   runs-on: ubuntu-latest
+  #   strategy:
+  #     matrix:
+  #       node-version: [18]
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v3
+  #     - uses: actions/setup-node@v3
+  #       with:
+  #         node-version: ${{ matrix.node-version }}
+  #         cache: yarn
+  #     - run: yarn
+
+  #     - name: Install textlint
+  #       run: 'yarn add -D textlint textlint-rule-common-misspellings textlint-rule-spellchecker'
+
+  #     - name: Run textlint
+  #       run: npx textlint -f checkstyle "posts/**/*.md" >> .textlint.log
+
+  #     - name: Run Prettier
+  #       run: yarn run prettier:check
+
+  #     - name: Run Embedme
+  #       run: yarn run embedme:check
+
+  publish:
+    name: publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Run NPM Build
+        run: |
+          npm install -g surge
+          npm run build
+      - name: Deploy to Surge
+        run: surge ./build ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
