@@ -31,7 +31,7 @@ const TextField = props => {
             ref={node => {
                 content = node;
             }}
-            onChange={handleClick}></textarea>
+            onInput={handleClick}></textarea>
     );
 };
 
