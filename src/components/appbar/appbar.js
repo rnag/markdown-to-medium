@@ -48,6 +48,7 @@ const Bar = _props => {
                             target="_blank"
                             className="link">
                             <GitHubIcon sx={{ fontSize: '35px' }} />
+                            {/*https://medium.com/me/stories*/}
                         </a>
                     </IconButton>
                 </StyledToolbar>
