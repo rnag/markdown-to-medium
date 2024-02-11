@@ -9,7 +9,7 @@ export function setContent(content, copySuccess) {
 export function reducer(
     state = {
         content: '',
-        copySuccess: false,
+        copySuccess: undefined,
     },
     action
 ) {

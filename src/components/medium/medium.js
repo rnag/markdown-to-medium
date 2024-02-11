@@ -3,31 +3,29 @@ import './medium.css';
 import { connect } from 'react-redux';
 
 const Medium = props => {
-    const { content, copySuccess } = props;
+    const { content: _, copySuccess } = props;
 
-    let text;
-
-    if (content) {
-        text = (
-            <div>
-                {(copySuccess && (
-                    <h3 style={{ color: 'green' }}>
-                        Copied to Clipboard!
+    const copyStatusMessage = (
+        <div>
+            {(copySuccess && (
+                <h3 style={{ color: 'green' }}>
+                    Copied to Clipboard!
+                </h3>
+            )) ||
+                (copySuccess === undefined && (
+                    <h3 style={{ color: 'gray' }}>
+                        Waiting to copy rich text...
                     </h3>
                 )) || <h3 style={{ color: 'red' }}>Error!</h3>}
-            </div>
-        );
-    } else {
-        text = (
-            <div>
-                <h3 style={{ color: 'gray' }}>
-                    Waiting to copy rich text...
-                </h3>
-            </div>
-        );
-    }
+        </div>
+    );
 
-    return <div id="medium" className="medium" children={text}></div>;
+    return (
+        <div
+            id="medium"
+            className="medium"
+            children={copyStatusMessage}></div>
+    );
 };
 
 export default connect(state => ({
