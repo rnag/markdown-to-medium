@@ -13,7 +13,7 @@ const TextField = props => {
         let copySuccess;
 
         try {
-            await copyRichToClip(converter({ content: contentVal }));
+            await copyRichToClip(converter(contentVal));
             copySuccess = true;
         } catch (e) {
             console.log('Fail', e);

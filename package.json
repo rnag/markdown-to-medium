@@ -18,6 +18,8 @@
   "dependencies": {
     "@mui/icons-material": "^5.15.9",
     "@mui/material": "^5.15.9",
+    "buffer": "^6.0.3",
+    "front-matter": "^4.0.2",
     "marked": "^12.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
