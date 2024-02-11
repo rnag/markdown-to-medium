@@ -1,3 +1,5 @@
+> Adapted from [@fanderzon/markdown-to-medium-tool](https://github.com/fanderzon/markdown-to-medium-tool)
+
 This is the source code for a tool that takes markdown format, and outputs html formatted in the way compatible with the  [medium.com](https://medium.com/) editor.
 
 The tool is hosted on surge: http://md-to-medium.surge.sh/
