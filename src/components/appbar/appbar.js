@@ -7,6 +7,7 @@ import {
     Toolbar,
     IconButton,
 } from '@mui/material';
+import { FaMedium } from 'react-icons/fa6';
 import { styled } from '@mui/material/styles';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import pkg from '../../../package.json';
@@ -38,7 +39,7 @@ const Bar = _props => {
                         Markdown to Medium
                     </Typography>
                     <IconButton
-                        aria-label="account of current user"
+                        aria-label="link to code"
                         aria-controls="code-appbar"
                         aria-haspopup="true"
                         color="inherit">
@@ -49,6 +50,20 @@ const Bar = _props => {
                             className="link">
                             <GitHubIcon sx={{ fontSize: '35px' }} />
                             {/*https://medium.com/me/stories*/}
+                        </a>
+                    </IconButton>
+                    <IconButton
+                        aria-label="link to your medium stories"
+                        aria-controls="code-appbar"
+                        aria-haspopup="true"
+                        sx={{ fontSize: '35px', marginLeft: '20px' }}
+                        color="inherit">
+                        <a
+                            href="https://medium.com/me/stories"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            className="link">
+                            <FaMedium />
                         </a>
                     </IconButton>
                 </StyledToolbar>
