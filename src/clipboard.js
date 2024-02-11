@@ -16,6 +16,7 @@ export async function copyRichToClip(rich) {
             'text/html': html,
             'text/plain': text,
         });
+        console.log(`Saving ${rich}`);
         await navigator.clipboard.write([data]);
     } else {
         // Fallback using the deprecated `document.execCommand`.

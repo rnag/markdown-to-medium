@@ -8,9 +8,12 @@ import { copyRichToClip } from '../../clipboard';
 const TextField = props => {
     let content;
 
-    async function handleClick() {
+    async function handleClick(e) {
         let contentVal = content.value;
         let copySuccess;
+
+        console.log(e.target.value);
+        console.log(e.target.value?.length);
 
         try {
             if (contentVal) {
