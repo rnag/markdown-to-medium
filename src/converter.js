@@ -19,8 +19,14 @@ function converter(content, allowUnsafe = false) {
     // common for Jekyll or GitHub Pages sites.
     if (fm.test(content)) {
         const fmContent = fm(content, { allowUnsafe });
+        const { title } = fmContent.attributes;
         // Just use the markdown body itself.
-        content = fmContent.body;
+        //
+        // If `title` is available in the front matter,
+        // add that as the article header.
+        content = title
+            ? `# ${title}\n\n` + fmContent.body
+            : fmContent.body;
         // We've established this markdown is in Jekyll format.
         //
         // Jekyll supports Liquid template format in Markdown files.
