@@ -1,4 +1,4 @@
-import marked from 'marked';
+import {marked} from 'marked';
 
 let renderer = new marked.Renderer();
 
