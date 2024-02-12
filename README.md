@@ -1,12 +1,12 @@
 # Markdown to Medium
 
-> Adapted from [@fanderzon/markdown-to-medium-tool](https://github.com/fanderzon/markdown-to-medium-tool)
+> *Adapted from [@fanderzon/markdown-to-medium-tool](https://github.com/fanderzon/markdown-to-medium-tool)*
 
-This is the source code for a tool that takes markdown format, and outputs html formatted in the way compatible with the  [medium.com](https://medium.com/) editor.
+Source code for a tool that takes Markdown format, and outputs HTML formatted in a way compatible with [medium.com](https://medium.com/) editor.
 
-The tool is hosted on surge: http://md-to-medium.surge.sh/
+The tool is hosted on my website: **https://ritviknag.com/markdown-to-medium**
 
-I made it for myself, so I can take my personal blog posts, written in markdown, paste them in here and copy the output to Medium when adding the post there.
+I made it for myself, so I can take my personal blog posts, written in `.md` files, paste them in here and copy the output to Medium when adding the post there.
 
 Medium does have a function to import posts, but it always fails miserably with the formatting.
 
