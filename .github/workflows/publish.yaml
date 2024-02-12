@@ -17,9 +17,6 @@ on:
   # pull_request:
   #   branches: [main]
 
-permissions:
-  id-token: write
-
 jobs:
   # build:
   #   name: Build
@@ -50,6 +47,11 @@ jobs:
   #       run: yarn run embedme:check
 
   publish:
+    # Add "id-token" with the intended permissions.
+    # This is to enable publishing to GitHub pages.
+    permissions:
+      id-token: write
+
     name: publish
     runs-on: ubuntu-latest
     steps:
