@@ -9,7 +9,7 @@ import {
 } from '@mui/material';
 import { FaMedium } from 'react-icons/fa6';
 import { styled } from '@mui/material/styles';
-import GitHubIcon from '@mui/icons-material/GitHub';
+import { BugReport, GitHub } from '@mui/icons-material';
 import pkg from '../../../package.json';
 
 import './appbar.css';
@@ -49,7 +49,24 @@ const Bar = _props => {
                             rel="noopener noreferrer"
                             target="_blank"
                             className="link">
-                            <GitHubIcon sx={{ fontSize: '35px' }} />
+                            <GitHub sx={{ fontSize: '35px' }} />
+                        </a>
+                    </IconButton>
+                    <IconButton
+                        aria-label="link to code"
+                        aria-controls="code-appbar"
+                        aria-haspopup="true"
+                        sx={{ marginLeft: '15px' }}
+                        color="inherit">
+                        <a
+                            href={`${pkg.repository.url.replace(
+                                '.git',
+                                ''
+                            )}/issues/new/choose`}
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            className="link">
+                            <BugReport sx={{ fontSize: '37px' }} />
                             {/*https://medium.com/me/stories*/}
                         </a>
                     </IconButton>
@@ -57,7 +74,7 @@ const Bar = _props => {
                         aria-label="link to your medium stories"
                         aria-controls="code-appbar"
                         aria-haspopup="true"
-                        sx={{ fontSize: '35px', marginLeft: '20px' }}
+                        sx={{ fontSize: '35px', marginLeft: '15px' }}
                         color="inherit">
                         <a
                             href="https://medium.com/me/stories"
