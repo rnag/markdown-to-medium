@@ -56,7 +56,7 @@ const Bar = _props => {
                         aria-label="link to code"
                         aria-controls="code-appbar"
                         aria-haspopup="true"
-                        sx={{ marginLeft: '15px' }}
+                        sx={{ marginLeft: '10px' }}
                         color="inherit">
                         <a
                             href={`${pkg.repository.url.replace(
@@ -74,7 +74,7 @@ const Bar = _props => {
                         aria-label="link to your medium stories"
                         aria-controls="code-appbar"
                         aria-haspopup="true"
-                        sx={{ fontSize: '35px', marginLeft: '15px' }}
+                        sx={{ fontSize: '35px', marginLeft: '10px' }}
                         color="inherit">
                         <a
                             href="https://medium.com/me/stories"
