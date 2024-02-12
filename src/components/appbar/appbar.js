@@ -74,7 +74,7 @@ const Bar = _props => {
                         aria-label="link to your medium stories"
                         aria-controls="code-appbar"
                         aria-haspopup="true"
-                        sx={{ fontSize: '35px', marginLeft: '10px' }}
+                        sx={{ fontSize: '35px', ml: '10px', mr: -2 }}
                         color="inherit">
                         <a
                             href="https://medium.com/me/stories"
