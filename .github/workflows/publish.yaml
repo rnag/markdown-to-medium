@@ -51,6 +51,7 @@ jobs:
     # This is to enable publishing to GitHub pages.
     permissions:
       id-token: write
+      pages: write
 
     name: publish
     runs-on: ubuntu-latest
@@ -81,10 +82,11 @@ jobs:
       - name: Install Dependencies
         if: ${{ steps.npm-cache.outputs.cache-hit != 'true' }}
         run: npm ci
-      - name: Build and Deploy to Surge
-        run: |
-          npm run build
-          # npx surge ./build ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
+      - name: Build for Production
+        # name: Build and Deploy to Surge
+        run: npm run build
+      - name: Deploy to Surge.sh
+        run: npx surge ./build ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
