@@ -1,6 +1,7 @@
 {
   "name": "markdown-to-medium",
   "version": "1.0.0",
+  "homepage": "/markdown-to-medium/",
   "description": "Convert markdown to medium format",
   "main": "src/index.js",
   "donationLinks": {
@@ -36,8 +37,7 @@
     "@babel/preset-env": "^7.23.9",
     "@babel/preset-react": "^7.23.3",
     "prettier": "^3.2.5",
-    "react-scripts": "^5.0.1",
-    "surge": "^0.23.1"
+    "react-scripts": "^5.0.1"
   },
   "browserslist": {
     "production": [
